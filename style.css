@@ -1,0 +1,302 @@
+body {
+  background: url(grass.jpg) no-repeat fixed;
+  background-size: 100% 100%;
+}
+
+.sign_board {
+  width: 200px;
+  position: absolute;
+  top: 168px;
+  right: 350px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.dirt,
+.mole {
+  width: 100px;
+  height: 50px;
+}
+.dirt {
+  position: absolute;
+  transform: translateY(110%);
+  z-index: 2;
+}
+.mole {
+    width: 80px;
+    height: 80px;
+    transform: translate(0rem, 1rem);
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 206px;
+  margin: 0;
+  position: absolute;
+  top: 301px;
+  left: 67px;
+}
+.square:nth-of-type(1) {
+  position: absolute;
+  top: 30px;
+  left: 204px;
+}
+.square:nth-of-type(2) {
+  position: absolute;
+  top: 150px;
+  left: 205px;
+}
+.sign_board {
+  display: none;
+}
+@media screen and (min-width: 360px) {
+  .grid {
+    top: 359px;
+  }
+}
+@media screen and (min-width: 390px) {
+  .grid {
+    top: 470px;
+  }
+}
+
+.hammer {
+  width: 50px;
+  height: 70px;
+      transform: translate(175%, -96%);
+  animation: hit 0.2s linear;
+}
+
+@keyframes hit {
+  500% {
+    transform: rotate(230deg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .dirt,
+  .mole {
+    width: 200px;
+    height: 91px;
+  }
+  .dirt {
+    position: absolute;
+    transform: translateY(110%);
+    z-index: 2;
+  }
+  .mole {
+    width: 100px;
+    transform: translate(3rem, 3rem);
+  }
+  .square {
+    width: 200px;
+    height: 200px;
+  }
+  .grid {
+    width: 618px;
+    top: 593px;
+    left: 181px;
+  }
+  .square:nth-of-type(1) {
+    top: 400px;
+    left: 271px;
+  }
+  .square:nth-of-type(2) {
+    top: 420px;
+    left: -5px;
+  }
+}
+@media only screen and (min-width: 834px) {
+  .grid {
+    top: 478px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    background-size: 100% 100%;
+  }
+  .grid {
+    position: inherit;
+  }
+  .sign_board {
+    display: inline;
+    width: 200px;
+    position: absolute;
+    top: 262px;
+    right: 256px;
+  }
+  .score_board,
+  .seconds_board {
+    position: absolute;
+    z-index: 2;
+    top: 266px;
+    right: 302px;
+    display: flex;
+    transform: rotate(345deg);
+  }
+  .seconds_board {
+    top: 295px;
+    right: 282px;
+    display: block;
+  }.mole {
+  width: 100px;
+  height: 90px;
+  transform: translate(3rem, 3rem);
+}
+  #time-left {
+    margin-top: -13px;
+    text-align: center;
+  }
+  .dirt,
+  .mole {
+    width: 200px;
+    height: 91px;
+  }
+  .dirt {
+    position: absolute;
+    transform: translateY(110%);
+    z-index: 2;
+  }
+  .mole {
+    width: 100px;
+    transform: translate(3rem, 3rem);
+  }
+  .hammer {
+    width: 120px;
+    height: 90px;
+  transform: translate(180%, -33%);}
+  .square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+  }
+  .square:nth-of-type(1) {
+    top: 383px;
+    left: 272px;
+  }
+  .square:nth-of-type(2) {
+    top: 511px;
+    left: 472px;
+  }
+  .square:nth-of-type(3) {
+    top: 434px;
+    left: 675px;
+  }
+  .square:nth-of-type(4) {
+    top: 668px;
+    left: 676px;
+  }
+  .square:nth-of-type(5) {
+    top: 629px;
+    left: 1077px;
+  }
+  .square:nth-of-type(6) {
+    top: 346px;
+    left: 1047px;
+  }
+  .square:nth-of-type(7) {
+    top: 571px;
+    left: 877px;
+  }
+  .square:nth-of-type(8) {
+    top: 637px;
+    left: 232px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .square:nth-of-type(1) {
+    top: 353px;
+  }
+  .square:nth-of-type(2) {
+    top: 561px;
+    left: 465px;
+  }
+  .square:nth-of-type(3) {
+    top: 361px;
+    left: 624px;
+  }
+  .square:nth-of-type(4) {
+    top: 562px;
+  }
+  .square:nth-of-type(5) {
+    top: 533px;
+    left: 1130px;
+}
+  .square:nth-of-type(6) {
+    top: 310px;
+    left: 1232px;
+  }
+  .square:nth-of-type(7) {
+    top: 499px;
+    left: 910px;
+  }
+  .square:nth-of-type(8) {
+    top: 517px;
+    left: 49px;
+  }
+  .sign_board {
+    top: 238px;
+    right: 350px;
+  }
+  .score_board,
+  .seconds_board {
+    top: 240px;
+    right: 398px;
+  }
+  .seconds_board {
+   top: 270px;
+    right: 372px;
+}
+}
+/* @media only screen and (min-width: 1440px) {
+  .square:nth-of-type(1) {
+    top: 353px;
+  }
+  .square:nth-of-type(2) {
+    top: 573px;
+    left: 465px;
+  }
+  .square:nth-of-type(3) {
+    top: 361px;
+    left: 624px;
+  }
+  .square:nth-of-type(4) {
+    top: 574px;
+  }
+  .square:nth-of-type(5) {
+    top: 565px;
+    left: 1130px;
+}
+  .square:nth-of-type(6) {
+    top: 310px;
+    left: 1232px;
+  }
+  .square:nth-of-type(7) {
+    top: 499px;
+    left: 910px;
+  }
+  .square:nth-of-type(8) {
+    top: 602px;
+    left: 246px;
+  }
+  .sign_board {
+    top: 238px;
+    right: 350px;
+  }
+  .score_board,
+  .seconds_board {
+    top: 240px;
+    right: 398px;
+  }
+  .seconds_board {
+   top: 270px;
+    right: 372px;
+}
+} */
