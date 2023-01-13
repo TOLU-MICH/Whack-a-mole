@@ -12,12 +12,11 @@ for (let i = 1; i < 9; i++) {
 }
 const square = document.querySelectorAll(".square");
 
-// let molePosition = setInterval(randomSquare, 1000);
-randomSquare()
+let molePosition = setInterval(randomSquare, 1000);
 function randomSquare() {
-    // setTimeout(() => {
-    //   document.querySelector(".mole").remove();
-    // }, 800);
+    setTimeout(() => {
+      document.querySelector(".mole").remove();
+    }, 800);
 
   let randomPosition = square[Math.floor(Math.random() * 9)];
   randomPosition.innerHTML += `<img src="./mole.png" alt="mole" class="mole">`;
@@ -33,12 +32,12 @@ square.forEach((id) => {
       score.textContent = result;
     }
     id.innerHTML +=`<img src="./Hammer Clipart 25510.png" alt="hammer" class="hammer">`;
-    // setTimeout(()=>{document.querySelector(".hammer").remove()}, 400)
+    setTimeout(()=>{document.querySelector(".hammer").remove()}, 200)
   });
 });
 
 
-// let timerId = setInterval(countDown, 1000);
+let timerId = setInterval(countDown, 1000);
 function countDown() {
   currentTime--;
   timeLeft.textContent = currentTime;

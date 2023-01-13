@@ -13,7 +13,6 @@ body {
 .square {
   width: 100px;
   height: 100px;
-  border: 1px solid black;
 }
 .dirt,
 .mole {
@@ -28,7 +27,7 @@ body {
 .mole {
     width: 80px;
     height: 80px;
-    transform: translate(0rem, 1rem);
+    transform: translate(1rem, 1rem);
 }
 
 .grid {
@@ -69,13 +68,13 @@ body {
 .hammer {
   width: 50px;
   height: 70px;
-      transform: translate(175%, -96%);
-  animation: hit 0.2s linear;
+  position: absolute;
+  animation: hit .06s linear;
 }
 
 @keyframes hit {
-  500% {
-    transform: rotate(230deg);
+  100% {
+    transform: rotate(-80deg);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -167,13 +166,12 @@ body {
     transform: translate(3rem, 3rem);
   }
   .hammer {
-    width: 120px;
-    height: 90px;
+    width: 90px;
+    height: 120px;
   transform: translate(180%, -33%);}
   .square {
     width: 200px;
     height: 200px;
-    border: 1px solid black;
     position: absolute;
   }
   .square:nth-of-type(1) {
