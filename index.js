@@ -10,7 +10,7 @@ let hitPosition, molePosition, timerId;
 
 // For each hole container
 for (let i = 1; i < 9; i++) {
-  grid.innerHTML += `<div class="square " id=${i}><img src="./dirt.png" alt="hole" class="dirt"></div>`;
+  grid.innerHTML += `<div class="square " id=${i}><img src="images/dirt.png" alt="hole" class="dirt"></div>`;
 }
 
 document.querySelector(".cancel").onclick = () => {
@@ -31,7 +31,7 @@ function randomSquare() {
   // set a random position for the  mole
   let randomPosition = square[Math.floor(Math.random() * 8)];
   // Set the mole to the random position
-  randomPosition.innerHTML += `<img src="./mole.png" alt="mole" class="mole">`;
+  randomPosition.innerHTML += `<img src="images/mole.png" alt="mole" class="mole">`;
 
   // assign the id of the randomPosition to hitPosition for us to use later
   hitPosition = randomPosition.id;
@@ -46,7 +46,7 @@ square.forEach((id) => {
       result++;
       score.textContent = result;
     }
-    id.innerHTML += `<img src="./Hammer Clipart 25510.png" alt="hammer" class="hammer">`;
+    id.innerHTML += `<img src="images/Hammer Clipart 25510.png" alt="hammer" class="hammer">`;
     // after 200 milliSeconds it removes the hammer
     setTimeout(() => {
       document.querySelector(".hammer").remove();
