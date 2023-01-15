@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- <h1>whack a mole</h1> -->
-
-    <span class="score_board">
-        <h2>Your score: </h2>
-        <h2 id = "score">0</h2>
-    </span>
-
-    <span class="seconds_board">
-        <h2>Seconds Left:</h2>
-        <h2 id = "time-left">60</h2>
-    </span>
-    <img src="signBoard.svg" alt="" class="sign_board">
-    <div class="grid">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menu-content">
+        <h1>RULES</h1>
+        <p>
+          Hit as many moles as you can before the timer runs out. You have 
+          <b class="time">60 seconds</b> to whack as many moles as you can.    </p>
+        <img src="./front page.jpg" alt="" />
+        <button class="cancel">X</button>
+      </div>
     </div>
+        <span class="score_board">
+          <h2>Your score:</h2>
+          <h2 id="score">0</h2>
+        </span>
+    
+        <span class="seconds_board">
+          <h2>Seconds Left:</h2>
+          <h2 id="time-left">60</h2>
+        </span>
+        <img src="signBoard.svg" alt="" class="sign_board" />
+        <div class="grid"></div>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

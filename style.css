@@ -1,6 +1,7 @@
 body {
   background: url(grass.jpg) no-repeat fixed;
   background-size: 100% 100%;
+  text-align: center;
 }
 
 .sign_board {
@@ -10,9 +11,46 @@ body {
   right: 350px;
 }
 
+.menu{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(24, 39, 51, 0.85);
+}
+.menu-content{
+  margin-top: 12rem;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.8s ease;
+}
+.menu-content,
+.menu img {
+  width: 20em;
+}
+.menu p, h1 {
+  color: #fff;
+}
+
+.time {
+  color: #f8de7e;
+  font-weight: 800;
+  font-size: larger;
+}
+.cancel {
+  border-radius: 5px;
+  color: rgba(24, 39, 51, 0.85);
+  font-weight: 400;
+}
 .square {
   width: 100px;
   height: 100px;
+  border: 1px solid black;
 }
 .dirt,
 .mole {
@@ -21,13 +59,13 @@ body {
 }
 .dirt {
   position: absolute;
-  transform: translateY(110%);
+  transform: translate(-54%, 110%);
   z-index: 2;
 }
 .mole {
-    width: 80px;
-    height: 80px;
-    transform: translate(1rem, 1rem);
+  width: 80px;
+  height: 80px;
+  transform: translate(-3rem, 1rem);
 }
 
 .grid {
@@ -54,6 +92,14 @@ body {
 .sign_board {
   display: none;
 }
+.notify{
+      position: absolute;
+    top: 4em;
+    left: 2em;
+    font-size: 39px;
+    font-weight: 800;
+    color: red;
+}
 @media screen and (min-width: 360px) {
   .grid {
     top: 359px;
@@ -69,7 +115,7 @@ body {
   width: 50px;
   height: 70px;
   position: absolute;
-  animation: hit .06s linear;
+  animation: hit 0.06s linear;
 }
 
 @keyframes hit {
@@ -78,6 +124,10 @@ body {
   }
 }
 @media only screen and (min-width: 768px) {
+  .menu-content,
+.menu img {
+  width: 25em;
+}
   .dirt,
   .mole {
     width: 200px;
@@ -85,16 +135,17 @@ body {
   }
   .dirt {
     position: absolute;
-    transform: translateY(110%);
+    transform:translate(-48%,110%);
     z-index: 2;
   }
   .mole {
     width: 100px;
-    transform: translate(3rem, 3rem);
+    transform: translate(-3rem, 3rem);
   }
   .square {
     width: 200px;
     height: 200px;
+    border: 1px solid;
   }
   .grid {
     width: 618px;
@@ -109,6 +160,11 @@ body {
     top: 420px;
     left: -5px;
   }
+.notify{
+    top: 2em;
+    left: 9em;
+    font-size: 59px;
+    font-weight: 900;
 }
 @media only screen and (min-width: 834px) {
   .grid {
@@ -142,11 +198,12 @@ body {
     top: 295px;
     right: 282px;
     display: block;
-  }.mole {
-  width: 100px;
-  height: 90px;
-  transform: translate(3rem, 3rem);
-}
+  }
+  .mole {
+    width: 100px;
+    height: 90px;
+    transform: translate(3rem, 3rem);
+  }
   #time-left {
     margin-top: -13px;
     text-align: center;
@@ -158,17 +215,18 @@ body {
   }
   .dirt {
     position: absolute;
-    transform: translateY(110%);
+    transform: translate(-50%, 101%);
     z-index: 2;
   }
   .mole {
     width: 100px;
-    transform: translate(3rem, 3rem);
+    transform: translate(-3rem, 3rem);
   }
   .hammer {
     width: 90px;
     height: 120px;
-  transform: translate(180%, -33%);}
+    transform: translate(180%, -33%);
+  }
   .square {
     width: 200px;
     height: 200px;
@@ -226,7 +284,7 @@ body {
   .square:nth-of-type(5) {
     top: 533px;
     left: 1130px;
-}
+  }
   .square:nth-of-type(6) {
     top: 310px;
     left: 1232px;
@@ -236,7 +294,7 @@ body {
     left: 910px;
   }
   .square:nth-of-type(8) {
-    top: 517px;
+    top: 568px;
     left: 49px;
   }
   .sign_board {
@@ -249,52 +307,7 @@ body {
     right: 398px;
   }
   .seconds_board {
-   top: 270px;
+    top: 270px;
     right: 372px;
-}
-}
-/* @media only screen and (min-width: 1440px) {
-  .square:nth-of-type(1) {
-    top: 353px;
   }
-  .square:nth-of-type(2) {
-    top: 573px;
-    left: 465px;
-  }
-  .square:nth-of-type(3) {
-    top: 361px;
-    left: 624px;
-  }
-  .square:nth-of-type(4) {
-    top: 574px;
-  }
-  .square:nth-of-type(5) {
-    top: 565px;
-    left: 1130px;
-}
-  .square:nth-of-type(6) {
-    top: 310px;
-    left: 1232px;
-  }
-  .square:nth-of-type(7) {
-    top: 499px;
-    left: 910px;
-  }
-  .square:nth-of-type(8) {
-    top: 602px;
-    left: 246px;
-  }
-  .sign_board {
-    top: 238px;
-    right: 350px;
-  }
-  .score_board,
-  .seconds_board {
-    top: 240px;
-    right: 398px;
-  }
-  .seconds_board {
-   top: 270px;
-    right: 372px;
-}
-} */
+}}
