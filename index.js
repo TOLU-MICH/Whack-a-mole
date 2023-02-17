@@ -9,9 +9,9 @@ let result = 0;
 let currentTime = timeLeft.textContent;
 let hitPosition, molePosition, timerId;
 
+// once the page is loaded it removes the preloader page
 window.addEventListener("load", () => {
-  // console.log("loaded");
-  preLoader.style.opacity = 0;
+  preLoader.style.display= "none";
 });
 
 // For each hole container
