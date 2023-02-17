@@ -2,11 +2,17 @@ const mole = document.querySelectorAll(".mole");
 const timeLeft = document.querySelector("#time-left");
 const grid = document.querySelector(".grid");
 let score = document.querySelector("#score");
+let preLoader = document.getElementById("preloader");
+let body = document.querySelector("body");
 
 let result = 0;
 let currentTime = timeLeft.textContent;
 let hitPosition, molePosition, timerId;
 
+window.addEventListener("load", () => {
+  // console.log("loaded");
+  preLoader.style.opacity = 0;
+});
 
 // For each hole container
 for (let i = 1; i < 9; i++) {
@@ -17,7 +23,6 @@ document.querySelector(".cancel").onclick = () => {
   document.querySelector(".menu").style.display = "none";
   molePosition = setInterval(randomSquare, 1000);
   timerId = setInterval(countDown, 1000);
-  
 };
 
 const square = document.querySelectorAll(".square");
@@ -62,8 +67,8 @@ function countDown() {
     clearInterval(timerId);
     clearInterval(molePosition);
     // alert("GAME OVER! your final score is" + result);
-    document.querySelector("body").innerHTML += `<p class = "notify">GAME OVER!</p>`;
-
-
+    body.innerHTML += `<p class = "notify">GAME OVER!</p>`;
   }
 }
+
+
